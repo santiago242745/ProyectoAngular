@@ -1,0 +1,33 @@
+.course-container {
+  padding: 40px;
+  text-align: center;
+  background-color: #f8f7fa;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #3f51b5;
+  margin-bottom: 30px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f8f7fa;
+}
+
+.course-card {
+  width: 280px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(12, 0, 0, 0.938);
+}
+
+.mat-mdc-card {
+  background-color: #bab2c925;
+}

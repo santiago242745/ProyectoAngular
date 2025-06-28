@@ -1,0 +1,48 @@
+<div class="admin-container">
+  <h2>Panel de Administración de Cursos</h2>
+
+  <button mat-raised-button color="primary" (click)="openForm()">Nuevo Curso</button>
+
+  <table mat-table [dataSource]="courses" class="mat-elevation-z8 full-width-table">
+
+    <ng-container matColumnDef="name">
+      <th style = "color:black" mat-header-cell *matHeaderCellDef>Nombre</th>
+      <td style = "color:black" mat-cell *matCellDef="let course">{{ course.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th style = "color:black" mat-header-cell *matHeaderCellDef>Descripción</th>
+      <td style = "color:black" mat-cell *matCellDef="let course">{{ course.description }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="level">
+      <th style = "color:black" mat-header-cell *matHeaderCellDef>Nivel</th>
+      <td style = "color:black" mat-cell *matCellDef="let course">{{ course.level }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="duration">
+      <th style = "color:black" mat-header-cell *matHeaderCellDef>Duración</th>
+      <td style = "color:black" mat-cell *matCellDef="let course">{{ course.duration }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th style = "color:black" mat-header-cell *matHeaderCellDef>Precio</th>
+      <td style = "color:black" mat-cell *matCellDef="let course">${{ course.price }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let course">
+        <button mat-icon-button color="primary" (click)="openForm(course)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteCourse(course.id!)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

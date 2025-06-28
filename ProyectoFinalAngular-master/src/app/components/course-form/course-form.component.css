@@ -1,0 +1,58 @@
+:host {
+  display: block;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+mat-form-field {
+  width: 100%;
+  background-color: white;
+}
+
+mat-form-field.mat-form-field {
+  border-radius: 8px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  min-width: 100px;
+}
+
+button[type="submit"] {
+  background-color: #3f51b5;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #303f9f;
+}
+
+  mat-form-field, input, textarea {
+  transition: all 0.3s ease;
+}
+
+.dialog-title {
+  text-align: center;
+  color: #3f51b5;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
